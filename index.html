@@ -22,10 +22,10 @@
   if('serviceWorker' in navigator){
     navigator.serviceWorker.register('./sw.js')
     .then(registration => {
-        alert('浏览器支持serviceWorker')
+        console.log(registration);
     })
     .catch(err => {
-      alert('浏览器不支持serviceWorker')
+        console.log(err);
     })
   }
 
