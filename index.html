@@ -28,5 +28,12 @@
         console.log(err);
     })
   }
+
+  if(Notification.permission === 'default'){
+    Notification.requestPermission()
+  }
+  if(!navigator.onLine){
+    new Notification('提示',{body:'您当前没有网络'})
+  }
 </script>
 </html>
