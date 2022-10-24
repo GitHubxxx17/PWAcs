@@ -1,10 +1,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.1.0/workbox-sw.js");
 var cacheStorageKey = 'minimal-pwa-1'
-var cacheList = [
-    '/',
-    'index.html',
-    'PWA.jpg'
-]
+var cacheList = ['/','index.html','logo.png']
+
 self.addEventListener('install', e => {
     e.waitUntil(
         caches.open(cacheStorageKey)
@@ -13,16 +10,7 @@ self.addEventListener('install', e => {
     )
 })
 
-self.addEventListener('fetch', function (e) {
-    e.respondWith(
-        caches.match(e.request).then(function (response) {
-            if (response != null) {
-                return response
-            }
-            return fetch(e.request.url)
-        })
-    )
-})
+
 self.addEventListener('activate', function (e) {
     e.waitUntil(
         //获取所有cache名称
@@ -37,6 +25,17 @@ self.addEventListener('activate', function (e) {
             )
         }).then(() => {
             return self.clients.claim()
+        })
+    )
+})
+
+self.addEventListener('fetch', function (e) {
+    e.respondWith(
+        caches.match(e.request).then(function (response) {
+            if (response != null) {
+                return response
+            }
+            return fetch(e.request.url)
         })
     )
 })
