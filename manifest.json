@@ -1,15 +1,15 @@
 {
-    "name": "PWA测试",
-    "short_name": "PWA",
+    "name": "一个PWA示例",
+    "short_name": "PWA示例",
     "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#3eaf7c",
     "icons": [
         {
-            "scr": "/PWA.jpg",
-            "sizes": "144x144",
-            "type": "image/jpg"
+            "src": "/PWA.jpg",
+            "sizes": "120x120",
+            "type": "image/png"
         }
-    ],
-    "background_color": "skyblue",
-    "theme_color": "yellow",
-    "display": "standalone"
+    ]
 }
