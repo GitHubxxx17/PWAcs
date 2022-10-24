@@ -9,7 +9,7 @@
         {
             "src": "/PWA.jpg",
             "sizes": "120x120",
-            "type": "image/png"
+            "type": "image/jpg"
         }
     ]
 }
