@@ -1,10 +1,10 @@
 {
     "name": "PWA测试",
     "short_name": "PWA",
-    "start_url": "/index.html",
+    "start_url": "./index.html",
     "icons": [
         {
-            "scr": "images/PWA.jpg",
+            "scr": "./images/PWA.jpg",
             "sizes": "144x144",
             "type": "image/jpg"
         }
